@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PoFieldModule, PoPageModule, PoWidgetModule } from '@po-ui/ng-components';
+import { PoButtonModule, PoFieldModule, PoPageModule, PoWidgetModule } from '@po-ui/ng-components';
 import { TarefaComponent } from '../../components/tarefa/tarefa.component';
 import { CommonModule } from '@angular/common';
 import { TarefaModel } from '../../models/tarefa.model';
@@ -7,7 +7,7 @@ import { TarefaModel } from '../../models/tarefa.model';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [PoFieldModule, TarefaComponent, CommonModule, PoPageModule, PoWidgetModule ],
+  imports: [PoFieldModule, TarefaComponent, CommonModule, PoPageModule, PoWidgetModule, PoButtonModule ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

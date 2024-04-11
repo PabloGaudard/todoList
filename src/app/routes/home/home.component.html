@@ -1,7 +1,9 @@
-<po-page-default p-title="Bem-vindo" p-subtitle="Bao demais?">
+<po-page-default p-title="Bem-vindo" p-subtitle="Lista de tarefas">
     
     <po-widget>
-        <po-input name="titulo" p-label="Titulo"></po-input> 
+        <po-input name="titulo" p-label="Titulo"></po-input>
+        
+        <po-button p-label="Adicionar"></po-button>
     </po-widget>
 
     <app-tarefa *ngFor="let tarefa of tarefas" [tarefa]="tarefa" (excluir)="excluir(tarefa.id)">
