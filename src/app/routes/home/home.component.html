@@ -1,0 +1,10 @@
+<po-page-default p-title="Bem-vindo" p-subtitle="Bao demais?">
+    
+    <po-widget>
+        <po-input name="titulo" p-label="Titulo"></po-input> 
+    </po-widget>
+
+    <app-tarefa *ngFor="let tarefa of tarefas" [tarefa]="tarefa" >
+    </app-tarefa>
+    
+</po-page-default>

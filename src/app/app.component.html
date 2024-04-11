@@ -1,2 +1,7 @@
-<app-tarefa *ngFor="let tarefa of tarefas" [tarefa]="tarefa" >
-</app-tarefa>
+
+<div id="header">
+    <po-link p-label="Ir para home" p-url="/"></po-link>
+    <po-link p-label="Ir para about" p-url="sobre"></po-link>
+</div>
+
+<router-outlet></router-outlet>
