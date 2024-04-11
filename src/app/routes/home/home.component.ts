@@ -35,4 +35,10 @@ export class HomeComponent {
     }
   ];
 
+  excluir(id:number) {
+
+    this.tarefas = this.tarefas.filter(tarefa => tarefa.id != id);
+
+  }
+
 }

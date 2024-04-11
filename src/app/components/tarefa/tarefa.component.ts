@@ -15,4 +15,8 @@ export class TarefaComponent {
   @Input() tarefa: TarefaModel = new TarefaModel();
   @Output() excluir = new EventEmitter<number>();
 
+  excluirTarefa(id: number){
+    this.excluir.emit(id);
+  }
+
 }

@@ -4,7 +4,7 @@
         <po-input name="titulo" p-label="Titulo"></po-input> 
     </po-widget>
 
-    <app-tarefa *ngFor="let tarefa of tarefas" [tarefa]="tarefa" >
+    <app-tarefa *ngFor="let tarefa of tarefas" [tarefa]="tarefa" (excluir)="excluir(tarefa.id)">
     </app-tarefa>
     
 </po-page-default>
