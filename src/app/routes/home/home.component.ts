@@ -3,15 +3,19 @@ import { PoButtonModule, PoFieldModule, PoPageModule, PoWidgetModule } from '@po
 import { TarefaComponent } from '../../components/tarefa/tarefa.component';
 import { CommonModule } from '@angular/common';
 import { TarefaModel } from '../../models/tarefa.model';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [PoFieldModule, TarefaComponent, CommonModule, PoPageModule, PoWidgetModule, PoButtonModule ],
+  imports: [PoFieldModule, TarefaComponent, CommonModule, PoPageModule, PoWidgetModule, PoButtonModule, FormsModule ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+
+  titulo: string = "";
+  data: string = "";
 
   tarefas: TarefaModel[] = [
     {
@@ -39,6 +43,10 @@ export class HomeComponent {
 
     this.tarefas = this.tarefas.filter(tarefa => tarefa.id != id);
 
+  }
+
+  adicionar(tarefa: TarefaModel) {
+    this.tarefas.push(tarefa);
   }
 
 }

@@ -1,7 +1,7 @@
 <po-widget *ngIf="tarefa.ativo" [ngClass]="tarefa.concluida ? 'concluida' : '' ">
         
     <h1>{{ tarefa.titulo }}</h1>
-    <p>{{ tarefa.data }}</p>
+    <p>{{ tarefa.data | date:'dd/MM/yyyy' :'pt-BR' }}</p>
     <br>
     <po-button p-label="Excluir" (p-click)="excluirTarefa(tarefa.id)"></po-button>
 

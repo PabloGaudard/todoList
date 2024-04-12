@@ -1,9 +1,15 @@
 <po-page-default p-title="Bem-vindo" p-subtitle="Lista de tarefas">
     
+
     <po-widget>
-        <po-input name="titulo" p-label="Titulo"></po-input>
+
+        <po-input class="po-md-6" name="titulo" [(ngModel)]="titulo" p-clean p-label="Titulo">
+        </po-input>
+
+        <po-input class="po-md-6" name="data" [(ngModel)]="data" p-clean p-label="Data">
+        </po-input>
         
-        <po-button p-label="Adicionar"></po-button>
+        <po-button p-label="Adicionar" style="float: right; margin-right: 8px;"></po-button>
     </po-widget>
 
     <app-tarefa *ngFor="let tarefa of tarefas" [tarefa]="tarefa" (excluir)="excluir(tarefa.id)">
