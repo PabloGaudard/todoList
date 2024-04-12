@@ -3,13 +3,15 @@
 
     <po-widget>
 
-        <po-input class="po-md-6" name="titulo" [(ngModel)]="titulo" p-clean p-label="Titulo">
+        <po-input class="po-md-6" name="titulo" [(ngModel)]="titulo" p-clean p-label="Titulo" p-required="true">
         </po-input>
 
         <po-input class="po-md-6" name="data" [(ngModel)]="data" p-clean p-label="Data">
         </po-input>
         
-        <po-button p-label="Adicionar" style="float: right; margin-right: 8px;"></po-button>
+        <po-button p-label="Adicionar" style="float: right; margin-right: 8px;" (p-click)="adicionar()" 
+        [p-disabled]="!valido"></po-button>
+
     </po-widget>
 
     <app-tarefa *ngFor="let tarefa of tarefas" [tarefa]="tarefa" (excluir)="excluir(tarefa.id)">

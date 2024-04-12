@@ -45,8 +45,20 @@ export class HomeComponent {
 
   }
 
-  adicionar(tarefa: TarefaModel) {
+  adicionar() {
+    let tarefa = new TarefaModel();
+
+    tarefa.titulo = this.titulo;
+    tarefa.data = new Date(this.data);
+
     this.tarefas.push(tarefa);
+
+    this.titulo = "";
+    this.data = "";
+  }
+
+  get valido(): boolean{
+    return this.titulo != "" && this.data != "";  
   }
 
 }
